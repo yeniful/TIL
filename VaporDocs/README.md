@@ -10,7 +10,7 @@ Install
 Getting Started
 ---
 - [ ] Hello, world
-- [x] Folder Structure
+- [x] [Folder Structure](/2_GettingStarted/1_FolderStructure)
 - [ ] SPM
 - [ ] Xcode
 
