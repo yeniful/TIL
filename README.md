@@ -20,10 +20,10 @@
 
 ## 🖥 CS
   - Data Structure
-    -  « 📖 [C++로 구현하는 자료구조와 알고리즘]() »
+    - « 📖 [C++로 구현하는 자료구조와 알고리즘](/CppDSA) »
   - Algorithm
   - Operating System
-  -  Network
+  - Network
 
 ## 🔨 ETC
   - Book
