@@ -8,14 +8,27 @@
 import UIKit
 
 class ViewController: UIViewController {
-    
-    
+
     let tableView: UITableView = {
         let table = UITableView()
         table.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
         return table
     }()
-    
+
+    let header:UIView = {
+        let view = UIView(frame: CGRect(x: 0, y: 0, width: 100, height: 150))
+        view.backgroundColor = .black
+
+        let title = UILabel()
+        view.addSubview(title)
+        title.text = "Custom Init"
+        title.textColor = .white
+        title.center = view.center
+        
+        return view
+    }()
+    let headerLabel = UILabel(frame: CGRect(x: 0, y: 0, width: 50, height: 50))
+   
     
     private let data = [
         ["apple", "sony", "google", "microsoft"],
@@ -27,10 +40,12 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
         view.addSubview(tableView)
         tableView.delegate = self
         tableView.dataSource = self
         tableView.frame = view.bounds
+        tableView.tableHeaderView = header
     }
 
 
