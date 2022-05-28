@@ -16,17 +16,37 @@ class ViewController: UIViewController {
     }()
 
     let header:UIView = {
-        let view = UIView(frame: CGRect(x: 0, y: 0, width: 100, height: 150))
+        let view = UIView(frame: CGRect(x: 0, y: 0, width: 100, height: 100))
         view.backgroundColor = .black
-
-        let title = UILabel()
-        view.addSubview(title)
-        title.text = "Custom Init"
-        title.textColor = .white
-        title.center = view.center
+        
+        
+        let label = UILabel()
+        view.addSubview(label)
+        
+        // autolayout
+        label.translatesAutoresizingMaskIntoConstraints = false
+        let safeArea = view.safeAreaLayoutGuide
+        label.leadingAnchor.constraint(equalTo: safeArea.leadingAnchor, constant: 16).isActive = true
+        label.trailingAnchor.constraint(equalTo: safeArea.trailingAnchor, constant: -16).isActive = true
+        label.topAnchor.constraint(equalTo: safeArea.topAnchor, constant: 10).isActive = true
+        label.centerYAnchor.constraint(equalTo: safeArea.centerYAnchor).isActive = true
+        
+        // font size
+        if let descriptor = UIFontDescriptor.preferredFontDescriptor(
+          withTextStyle: .largeTitle)
+          .withDesign(.rounded) {
+        label.font = UIFont(descriptor: descriptor, size: 30)
+        }
+        
+        // text
+        label.text = "Custom Init"
+        label.numberOfLines = -1
+        label.textColor = .white
+        label.textAlignment = .center
         
         return view
     }()
+    
     let headerLabel = UILabel(frame: CGRect(x: 0, y: 0, width: 50, height: 50))
    
     
@@ -40,7 +60,10 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        
+        setTableView()
+    }
+    
+    func setTableView(){
         view.addSubview(tableView)
         tableView.delegate = self
         tableView.dataSource = self
