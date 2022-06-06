@@ -9,12 +9,17 @@ import Foundation
 import SwiftUI
 import CoreLocation
 
-struct Landmark: Hashable, Codable {
+
+//The Landmark data already has the id property required by Identifiable protocol
+//you only need to add a property to decode it when reading the data.
+
+struct Landmark: Hashable, Codable, Identifiable {
     var id: Int
     var name: String
     var park: String
     var state: String
     var description: String
+    var isFavorite: Bool
 
     private var imageName: String
     var image: Image {
