@@ -1,12 +1,12 @@
 # Data Structures & Algorithms in Swift
 
 
-#### [Swift Standard Library](/STL)
+## [Swift Standard Library](/STL)
 ## Element Data Structure
 #### Stack
 #### Linked List
-## Queues
-#### Trees
+#### Queues
+## Trees
 #### Binary Trees
 #### Binary Search Trees
 #### AVL Trees
