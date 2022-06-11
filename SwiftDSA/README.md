@@ -1,7 +1,7 @@
 # Data Structures & Algorithms in Swift
 
 
-## [Swift Standard Library](/Stl)
+## [Swift Standard Library](/SwiftDSA/STL)
 ## Element Data Structure
 #### Stack
 #### Linked List
