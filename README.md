@@ -3,6 +3,7 @@
 ## 🖥 CS
   - Data Structure
     - « 📖 [C++로 구현하는 자료구조와 알고리즘](/CppDSA) »
+    - « 📖 [Data Structure & Algorithms in Swift](/SwiftDSA) »
   - Algorithm
   - Operating System
   - Network
@@ -24,6 +25,7 @@
   - HIG
     - « 📄 [Human Interface Guidelines]() »
   - Clone Coding
+  - Gesture
 
 ## 🚀 Server Side
   - Vapor
